@@ -27,7 +27,7 @@ def create_file():
     df_price.rename(columns = {'id':'product_id','prices.amountMax':'amountMax','prices.amountMin':'amountMin','prices.availability':'availability',
                                'prices.condition':'condition','prices.currency':'currency','prices.dateSeen':'dateSeen','prices.isSale':'.isSale',
                                'prices.merchant':'merchant','prices.shipping':'shipping','prices.sourceURLs':'sourceURLs'}, inplace = True)
-    # contruxtion du data frame des caractéristiques des produits
+    # contruction du data frame des caractéristiques des produits
     df_product = df[['id', 'asins', 'brand', 'categories', 'dateAdded',
            'dateUpdated', 'imageURLs', 'keys', 'manufacturer',
            'manufacturerNumber', 'name', 'primaryCategories', 'sourceURLs','weight']]
