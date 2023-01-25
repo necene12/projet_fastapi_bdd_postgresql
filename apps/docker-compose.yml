@@ -10,7 +10,7 @@ services:
   ports:
     - "5000:5000"
   networks:
-    - "bridge"
+    - bridge
  app:
   build: .
   image: necene12/image_api_bdd_postgresql
@@ -21,4 +21,7 @@ services:
   volumes:
     - ../data
   networks:
-    - "bridge"
+    - bridge
+
+networks:
+  bridge:
