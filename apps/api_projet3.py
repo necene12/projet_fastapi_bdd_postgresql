@@ -95,14 +95,14 @@ def load_data():
     connection = get_connection()
     cursor = connection.cursor()
     try:
-        cursor.execute('''LOAD DATA INFILE 'tb_produits.csv'
+        cursor.execute('''LOAD DATA INFILE 'bdd_produits.csv'
                           INTO TABLE products
                           FIELDS TERMINATED BY ','
                           ENCLOSED BY '"'
                           LINES TERMINATED BY '\n'
                           IGNORE 1 ROWS
                           (product_id,asins,brand,categories,dateAdded,dateUpdated,imageURLs,keys,manufacturer,manufacturerNumber,name,primaryCategories,sourceURLs,weight);''')
-        cursor.execute('''LOAD DATA INFILE 'tb_prix.csv'
+        cursor.execute('''LOAD DATA INFILE 'bdd_prix.csv'
                           INTO TABLE prices
                           FIELDS TERMINATED BY ','
                           ENCLOSED BY '"'
