@@ -39,7 +39,7 @@ def create_file():
     return "Les fichiers sources ont été créés avec succès"
 
 # Endpoint création de la base de données et de la tables produit et prix
-@api.post("/creation_base_de_donnee_tables")
+@api.post("/creation_des_tables")
 def create_database():
     connection = get_connection()
     cursor = connection.cursor()
@@ -120,7 +120,7 @@ def load_data():
 
 # Endpoint de requêtes sur la base de données:
 @api.post("/requetes_sur_la_bdd")
-def load_data():
+def request_data():
     connection = get_connection()
     cursor = connection.cursor()
     try:
