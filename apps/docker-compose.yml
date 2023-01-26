@@ -13,7 +13,7 @@ services:
     - bridge
  app:
   build: .
-  image: necene12/image_api_bdd_postgresql
+  image: necene12/image_api_bdd_postgresql:2
   ports:
     - "8000:8000"
   depends_on:
